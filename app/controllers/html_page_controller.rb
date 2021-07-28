@@ -4,4 +4,7 @@ class HtmlPageController < ApplicationController
 
   def help
   end
+
+  def about
+  end
 end
