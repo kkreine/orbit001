@@ -1,4 +1,12 @@
+<% provide(:title, 'Home') %>
 
-<h1>Orbit Home Page</h1>
-<p>This is the template <b>Home Page</b> for koris Orbit Feedback Application</p>
+<div class="center jumbotron">
+    <h1>Welcome to Koris Orbit</h1>
+    <h2>
+        This is the home page of koris orbit application. You can find the code for this application at
+        <a href="https://github.com/kkreine/orbit001">My Github account</a>
+    </h2>
+
+    <%= link_to "Create an account", signup_path, class: "btn-lg btn-primary" %>
+</div>
 
