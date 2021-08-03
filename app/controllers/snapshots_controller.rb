@@ -1,7 +1,7 @@
 class SnapshotsController < ApplicationController
     before_action :logged_in_user, only: [:create, :destroy]
     before_action :correct_user, only: :destroy
-  
+
     def create
       @snapshot = current_user.snapshots.build(snapshot_params)
       @snapshot.image.attach(params[:snapshot][:image])
@@ -9,8 +9,9 @@ class SnapshotsController < ApplicationController
         flash[:success] = "Snapshot created"
         redirect_to root_url
       else
+      #---
         @feed_items = current_user.feed.paginate(page: params[:page])
-        render 'html_pages/home'
+        render 'html_page/home'
       end
     end
   
@@ -27,7 +28,7 @@ class SnapshotsController < ApplicationController
     end
   
     def correct_user
-      @snaphot = current_user.snapshots.find_by(id: params[:id])
+      @snapshot = current_user.snapshots.find_by(id: params[:id])
       redirect_to root_url if @snapshot.nil?
     end
 end
