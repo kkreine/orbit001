@@ -2,7 +2,7 @@
 
 ## A high level summary of the Orbit Application
 
-[Website Link](https://afternoon-spire-34284.herokuapp.com)
+[Website Link](https://afternoon-spire-34284.herokuapp.com){:target="_blank"}
 
 1. The ability to add a new team member:
     - first name
