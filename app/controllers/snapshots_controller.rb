@@ -9,7 +9,7 @@ class SnapshotsController < ApplicationController
         flash[:success] = "Snapshot created"
         redirect_to root_url
       else
-      #---
+      # Feed to be more than just current user??
         @feed_items = current_user.feed.paginate(page: params[:page])
         render 'html_page/home'
       end
